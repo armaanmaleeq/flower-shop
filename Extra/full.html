@@ -1,0 +1,507 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Faugel Flower Shop - Always Fresh Flowers</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- FontAwesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <!-- Tailwind CSS v4 CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style>
+      * {
+        font-family: "Roboto", sans-serif;
+      }
+    </style>
+  </head>
+
+  <body class="bg-gray-50 text-gray-800 antialiased">
+    <!-- Navbar -->
+    <header class="sticky top-0 z-50 bg-white shadow-sm">
+      <nav
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between"
+      >
+        <!-- Logo -->
+        <a href="#" class="flex items-center gap-2">
+          <span
+            class="text-2xl font-black tracking-wider text-gray-900 uppercase"
+          >
+            Faugel<span class="text-[#E95A08]">.</span>
+          </span>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <ul class="hidden md:flex items-center gap-8 text-base font-medium">
+          <li>
+            <a
+              href="#home"
+              class="text-[#E95A08] border-b-2 border-[#E95A08] pb-1 transition-colors"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="#shop"
+              class="hover:text-[#E95A08] border-b-2 border-transparent hover:border-[#E95A08] pb-1 transition-colors"
+              >Shop</a
+            >
+          </li>
+          <li>
+            <a
+              href="#deals"
+              class="hover:text-[#E95A08] border-b-2 border-transparent hover:border-[#E95A08] pb-1 transition-colors"
+              >Deals</a
+            >
+          </li>
+          <li>
+            <a
+              href="#about"
+              class="hover:text-[#E95A08] border-b-2 border-transparent hover:border-[#E95A08] pb-1 transition-colors"
+              >About Us</a
+            >
+          </li>
+        </ul>
+
+        <!-- Right Side Actions -->
+        <div class="flex items-center gap-4">
+          <button
+            id="cartBtn"
+            class="relative flex items-center gap-2 font-medium hover:text-[#E95A08] transition-colors py-2 px-3 rounded-lg hover:bg-orange-50 cursor-pointer"
+          >
+            <i class="fa-solid fa-bag-shopping text-xl"></i>
+            <span class="hidden sm:inline">Cart</span>
+            <span
+              id="cartCount"
+              class="bg-[#E95A08] text-white text-xs font-bold px-2 py-0.5 rounded-full"
+              >0</span
+            >
+          </button>
+
+          <!-- Mobile Menu Button -->
+          <button
+            id="mobileMenuBtn"
+            class="md:hidden text-2xl text-gray-700 hover:text-[#E95A08] focus:outline-none"
+          >
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </nav>
+
+      <!-- Mobile Navigation Drawer -->
+      <div
+        id="mobileMenu"
+        class="hidden md:hidden bg-white border-t border-gray-100 px-4 pt-2 pb-4 space-y-2"
+      >
+        <a
+          href="#home"
+          class="block px-3 py-2 rounded-md text-base font-medium text-[#E95A08] bg-orange-50"
+          >Home</a
+        >
+        <a
+          href="#shop"
+          class="block px-3 py-2 rounded-md text-base font-medium hover:text-[#E95A08] hover:bg-gray-50"
+          >Shop</a
+        >
+        <a
+          href="#deals"
+          class="block px-3 py-2 rounded-md text-base font-medium hover:text-[#E95A08] hover:bg-gray-50"
+          >Deals</a
+        >
+        <a
+          href="#about"
+          class="block px-3 py-2 rounded-md text-base font-medium hover:text-[#E95A08] hover:bg-gray-50"
+          >About Us</a
+        >
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Hero Banner Section -->
+      <section
+        id="home"
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20"
+      >
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <div class="space-y-6 text-center md:text-left">
+            <h1
+              class="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-gray-900 leading-tight uppercase"
+            >
+              Always <br />
+              <span class="text-[#E95A08]">Fresh Flowers</span>
+            </h1>
+            <p
+              class="text-gray-600 text-base sm:text-lg max-w-lg leading-relaxed mx-auto md:mx-0"
+            >
+              Indulge your senses with the beauty and fragrance of our fresh
+              flower shop. From classic roses to exotic blooms, we offer a wide
+              variety of fresh flowers that are perfect for any occasion.
+            </p>
+            <div class="pt-2">
+              <a
+                href="#shop"
+                class="inline-block bg-[#E95A08] hover:bg-orange-700 text-white font-medium px-8 py-3.5 rounded-md shadow-md transition-all transform hover:-translate-y-0.5"
+              >
+                Shop Now
+              </a>
+            </div>
+          </div>
+          <div class="flex justify-center md:justify-end">
+            <img
+              src="https://images.unsplash.com/photo-1563241527-3004b7be0ffd?auto=format&fit=crop&w=800&q=80"
+              alt="Fresh Flower Bouquet"
+              class="w-full max-w-md md:max-w-lg h-auto rounded-2xl object-cover shadow-lg"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- Featured Plants Section -->
+      <section id="shop" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <h2 class="text-3xl sm:text-4xl font-bold text-gray-900">
+            Our Featured Plants
+          </h2>
+          <p class="text-gray-600 mt-3 text-base">
+            Handpicked fresh floral arrangements and indoor plants, carefully
+            cultivated for every dynamic setting.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Card 1 -->
+          <div
+            class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow border border-gray-100 flex flex-col justify-between"
+          >
+            <div class="relative bg-gray-100 p-4">
+              <img
+                src="https://images.unsplash.com/photo-1526047932273-341f2a7631f9?auto=format&fit=crop&w=500&q=80"
+                alt="Pink Rose Bouquet"
+                class="w-full h-64 object-cover rounded-lg"
+              />
+            </div>
+            <div class="p-5 text-center flex-1 flex flex-col justify-between">
+              <div>
+                <h3 class="font-semibold text-lg text-gray-800">
+                  Pink Rose Bouquet
+                </h3>
+                <p class="text-[#E95A08] font-bold text-xl mt-1">$25.00</p>
+              </div>
+              <button
+                class="add-to-cart-btn mt-4 w-full bg-gray-900 hover:bg-[#E95A08] text-white py-2 px-4 rounded-md font-medium transition-colors cursor-pointer"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div
+            class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow border border-gray-100 flex flex-col justify-between"
+          >
+            <div class="relative bg-gray-100 p-4">
+              <img
+                src="https://images.unsplash.com/photo-1508610048659-a06b669e3321?auto=format&fit=crop&w=500&q=80"
+                alt="White Lily Arrangement"
+                class="w-full h-64 object-cover rounded-lg"
+              />
+            </div>
+            <div class="p-5 text-center flex-1 flex flex-col justify-between">
+              <div>
+                <h3 class="font-semibold text-lg text-gray-800">
+                  White Lily Elegance
+                </h3>
+                <p class="text-[#E95A08] font-bold text-xl mt-1">$32.00</p>
+              </div>
+              <button
+                class="add-to-cart-btn mt-4 w-full bg-gray-900 hover:bg-[#E95A08] text-white py-2 px-4 rounded-md font-medium transition-colors cursor-pointer"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div
+            class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow border border-gray-100 flex flex-col justify-between"
+          >
+            <div class="relative bg-gray-100 p-4">
+              <img
+                src="https://images.unsplash.com/photo-1582794543139-8ac9cb0f7b11?auto=format&fit=crop&w=500&q=80"
+                alt="Red Rose Box"
+                class="w-full h-64 object-cover rounded-lg"
+              />
+            </div>
+            <div class="p-5 text-center flex-1 flex flex-col justify-between">
+              <div>
+                <h3 class="font-semibold text-lg text-gray-800">
+                  Classic Red Roses
+                </h3>
+                <p class="text-[#E95A08] font-bold text-xl mt-1">$40.00</p>
+              </div>
+              <button
+                class="add-to-cart-btn mt-4 w-full bg-gray-900 hover:bg-[#E95A08] text-white py-2 px-4 rounded-md font-medium transition-colors cursor-pointer"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div
+            class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow border border-gray-100 flex flex-col justify-between"
+          >
+            <div class="relative bg-gray-100 p-4">
+              <img
+                src="https://images.unsplash.com/photo-1561181286-d3fee7d55364?auto=format&fit=crop&w=500&q=80"
+                alt="Sunflowers Mix"
+                class="w-full h-64 object-cover rounded-lg"
+              />
+            </div>
+            <div class="p-5 text-center flex-1 flex flex-col justify-between">
+              <div>
+                <h3 class="font-semibold text-lg text-gray-800">
+                  Golden Sunflowers
+                </h3>
+                <p class="text-[#E95A08] font-bold text-xl mt-1">$28.00</p>
+              </div>
+              <button
+                class="add-to-cart-btn mt-4 w-full bg-gray-900 hover:bg-[#E95A08] text-white py-2 px-4 rounded-md font-medium transition-colors cursor-pointer"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Hot Deals Section -->
+      <section id="deals" class="bg-orange-50 py-16 my-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center bg-white rounded-2xl p-8 md:p-12 shadow-sm border border-orange-100"
+          >
+            <div class="space-y-4 text-center md:text-left">
+              <span
+                class="inline-block bg-orange-100 text-[#E95A08] font-bold text-sm px-3 py-1 rounded-full uppercase tracking-wider"
+              >
+                Limited Time Offer
+              </span>
+              <h2
+                class="text-3xl sm:text-5xl font-extrabold text-gray-900 leading-tight"
+              >
+                Hot Deal! Get <span class="text-[#E95A08]">30% Off</span>
+              </h2>
+              <p class="text-gray-600 text-base leading-relaxed max-w-md">
+                Brighten someone's day or elevate your living space. Order today
+                and take advantage of our exclusive seasonal fresh bloom offer.
+              </p>
+              <div class="pt-2">
+                <a
+                  href="#shop"
+                  class="inline-block bg-[#E95A08] hover:bg-orange-700 text-white font-medium px-8 py-3 rounded-md shadow transition-colors"
+                >
+                  Claim Discount
+                </a>
+              </div>
+            </div>
+            <div class="flex justify-center">
+              <img
+                src="https://images.unsplash.com/photo-1527061011665-3652c757a4d4?auto=format&fit=crop&w=700&q=80"
+                alt="Hot Deal Flowers"
+                class="w-full max-w-md h-72 object-cover rounded-xl shadow-md"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Instagram Showcase Section -->
+      <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div class="text-center max-w-xl mx-auto mb-10">
+          <h2 class="text-3xl font-bold text-gray-900">#FlowerMarket</h2>
+          <p class="text-gray-600 mt-2">
+            Follow our Instagram community for daily floral inspiration.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div class="relative group overflow-hidden rounded-lg aspect-square">
+            <img
+              src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=400&q=80"
+              alt="Insta Flower 1"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+            />
+            <div
+              class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-2xl"
+            >
+              <i class="fa-brands fa-instagram"></i>
+            </div>
+          </div>
+          <div class="relative group overflow-hidden rounded-lg aspect-square">
+            <img
+              src="https://images.unsplash.com/photo-1508610048659-a06b669e3321?auto=format&fit=crop&w=400&q=80"
+              alt="Insta Flower 2"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+            />
+            <div
+              class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-2xl"
+            >
+              <i class="fa-brands fa-instagram"></i>
+            </div>
+          </div>
+          <div class="relative group overflow-hidden rounded-lg aspect-square">
+            <img
+              src="https://images.unsplash.com/photo-1526047932273-341f2a7631f9?auto=format&fit=crop&w=400&q=80"
+              alt="Insta Flower 3"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+            />
+            <div
+              class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-2xl"
+            >
+              <i class="fa-brands fa-instagram"></i>
+            </div>
+          </div>
+          <div class="relative group overflow-hidden rounded-lg aspect-square">
+            <img
+              src="https://images.unsplash.com/photo-1563241527-3004b7be0ffd?auto=format&fit=crop&w=400&q=80"
+              alt="Insta Flower 4"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+            />
+            <div
+              class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-2xl"
+            >
+              <i class="fa-brands fa-instagram"></i>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Newsletter Banner -->
+      <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div
+          class="bg-gray-900 rounded-2xl p-8 sm:p-12 text-center text-white space-y-6"
+        >
+          <h2 class="text-3xl sm:text-4xl font-bold">Get The Latest Deals</h2>
+          <p class="text-gray-300 max-w-md mx-auto">
+            Subscribe to our newsletter and receive $15 off your first flower
+            arrangement delivery.
+          </p>
+          <form
+            id="newsletterForm"
+            class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto"
+          >
+            <input
+              type="email"
+              placeholder="Enter your email address"
+              required
+              class="px-4 py-3 rounded-md text-gray-900 w-full focus:outline-none focus:ring-2 focus:ring-[#E95A08] bg-white"
+            />
+            <button
+              type="submit"
+              class="bg-[#E95A08] hover:bg-orange-700 text-white font-medium px-6 py-3 rounded-md transition-colors whitespace-nowrap cursor-pointer"
+            >
+              Subscribe
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer
+      id="about"
+      class="bg-white border-t border-gray-200 mt-16 pt-12 pb-8"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+          class="flex flex-col md:flex-row justify-between items-center gap-6 pb-8 border-b border-gray-200"
+        >
+          <div class="text-center md:text-left">
+            <span
+              class="text-2xl font-black tracking-wider text-gray-900 uppercase"
+            >
+              Faugel<span class="text-[#E95A08]">.</span>
+            </span>
+            <p class="text-gray-500 text-sm mt-2 max-w-xs">
+              Handcrafted bouquets and garden fresh blooms delivered straight to
+              your door.
+            </p>
+          </div>
+
+          <div class="flex gap-6 text-gray-600">
+            <a href="#" class="hover:text-[#E95A08] transition-colors"
+              ><i class="fa-brands fa-facebook-f text-xl"></i
+            ></a>
+            <a href="#" class="hover:text-[#E95A08] transition-colors"
+              ><i class="fa-brands fa-instagram text-xl"></i
+            ></a>
+            <a href="#" class="hover:text-[#E95A08] transition-colors"
+              ><i class="fa-brands fa-twitter text-xl"></i
+            ></a>
+            <a href="#" class="hover:text-[#E95A08] transition-colors"
+              ><i class="fa-brands fa-pinterest text-xl"></i
+            ></a>
+          </div>
+        </div>
+
+        <div class="text-center text-gray-400 text-xs mt-8">
+          &copy; 2026 Faugel Flower Shop. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <!-- Interactive JavaScript -->
+    <script>
+      // Toggle Mobile Menu
+      const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+      const mobileMenu = document.getElementById("mobileMenu");
+
+      mobileMenuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+
+      // Cart Interactive Counter
+      let cartCount = 0;
+      const cartCountEl = document.getElementById("cartCount");
+      const addToCartButtons = document.querySelectorAll(".add-to-cart-btn");
+
+      addToCartButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          cartCount++;
+          cartCountEl.textContent = cartCount;
+
+          // Button feedback transition
+          const originalText = button.textContent;
+          button.textContent = "Added!";
+          button.classList.replace("bg-gray-900", "bg-emerald-600");
+
+          setTimeout(() => {
+            button.textContent = originalText;
+            button.classList.replace("bg-emerald-600", "bg-gray-900");
+          }, 1200);
+        });
+      });
+
+      // Newsletter Form Handler
+      const newsletterForm = document.getElementById("newsletterForm");
+      newsletterForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        alert("Thank you for subscribing! Your discount coupon has been sent.");
+        newsletterForm.reset();
+      });
+    </script>
+  </body>
+</html>
