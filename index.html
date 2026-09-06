@@ -11,7 +11,11 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="shortcut icon" href="image/logo.png" type="image/x-icon" />
+    <link
+      rel="shortcut icon"
+      href="https://cdn-icons-png.flaticon.com/512/868/868078.png"
+      type="image/x-icon"
+    />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script
       src="https://kit.fontawesome.com/61e8f2680f.js"
@@ -25,313 +29,472 @@
     </style>
   </head>
 
-  <body class="bg-gray-100">
+  <body class="bg-gray-50 text-gray-800">
     <!-- Header -->
     <header>
-      <!-- navbar -->
+      <!-- Navbar -->
       <nav
-        class="flex items-center justify-between bg-slate-200 shadow-sm px-5"
+        class="flex items-center justify-between bg-slate-200 shadow-sm px-5 md:px-12 py-3 sticky top-0 z-50"
       >
-        <img src="image/logo.png" alt="Faugel" class="h-18 py-2" />
-        <div class="flex gap-10">
-          <ul class="flex text-lg font-medium gap-8">
+        <div class="text-3xl font-bold flex items-center gap-2">
+          <i class="fa-solid fa-leaf text-[#E95A08]"></i>
+          Faugel
+        </div>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex gap-10">
+          <ul class="flex text-lg font-medium gap-8 items-center">
             <li
-              class="hover:text-[#E95A08] hover:cursor-pointer border-b-slate-200 hover:border-b-[#E95A08] border-b-[3px] transition duration-150 ease-in"
+              class="hover:text-[#E95A08] hover:cursor-pointer border-b-[3px] border-transparent hover:border-[#E95A08] transition duration-150 ease-in py-2"
             >
               <a href="#">Home</a>
             </li>
             <li
-              class="hover:text-[#E95A08] hover:cursor-pointer border-b-slate-200 hover:border-b-[#E95A08] border-b-[3px] transition duration-150 ease-in"
+              class="hover:text-[#E95A08] hover:cursor-pointer border-b-[3px] border-transparent hover:border-[#E95A08] transition duration-150 ease-in py-2"
             >
-              <a href="#">Shop</a>
+              <a href="#plants">Shop</a>
             </li>
             <li
-              class="hover:text-[#E95A08] hover:cursor-pointer border-b-slate-200 hover:border-b-[#E95A08] border-b-[3px] transition duration-150 ease-in"
+              class="hover:text-[#E95A08] hover:cursor-pointer border-b-[3px] border-transparent hover:border-[#E95A08] transition duration-150 ease-in py-2"
             >
-              <a href="#">Blog</a>
+              <a href="#about">About Us</a>
             </li>
             <li
-              class="hover:text-[#E95A08] hover:cursor-pointer border-b-slate-200 hover:border-b-[#E95A08] border-b-[3px] transition duration-150 ease-in"
+              class="hover:text-[#E95A08] hover:cursor-pointer border-b-[3px] border-transparent hover:border-[#E95A08] transition duration-150 ease-in py-2"
             >
-              <a href="#">About Us</a>
+              <a href="#contact">Contact Us</a>
             </li>
           </ul>
-          <div
-            class="text-lg font-medium flex items-center justify-center gap-2 hover:cursor-pointer hover:text-[#E95A08] border-b-slate-200 hover:border-b-[#E95A08] border-b-[3px] transition duration-150 ease-in"
-          >
-            <i class="fa-solid fa-bag-shopping text-xl"></i>
-            <span>Cart</span>
-          </div>
+        </div>
+
+        <!-- Cart Icon -->
+        <div
+          class="text-lg font-medium flex items-center justify-center gap-2 hover:cursor-pointer hover:text-[#E95A08] border-b-[3px] border-transparent hover:border-[#E95A08] transition duration-150 ease-in py-2"
+        >
+          <i class="fa-solid fa-bag-shopping text-xl"></i>
+          <span class="hidden sm:inline">Cart</span>
         </div>
       </nav>
 
-      <!-- hero banner -->
-      <div class="h-80 flex items-end justify-between gap-4 mt-12 p-3">
-        <!-- hero title -->
-        <div class="pl-4 pr-4 w-1/2">
-          <h1 class="font-semibold text-7xl uppercase">
-            <span>Always</span>
+      <!-- Hero Banner -->
+      <div
+        class="flex flex-col-reverse md:flex-row items-center justify-between gap-10 mt-12 p-5 md:px-12 lg:px-24"
+      >
+        <div class="w-full md:w-1/2 text-center md:text-left">
+          <h1
+            class="font-semibold text-5xl md:text-6xl lg:text-7xl uppercase leading-tight"
+          >
+            <span>Always</span><br />
             <span class="text-[#E95A08]"> Fresh Flowers </span>
           </h1>
-          <span>
-            <p class="text-lg font-light mt-4 flex">
-              Indulge your senses with the beauty and fragrance of our fresh
-              flower shop. From classic roses to exotic blooms, we offer a wide
-              variety of fresh flowers that are perfect for any occasion.
-            </p>
-          </span>
+          <p
+            class="text-lg font-light mt-6 text-gray-600 leading-relaxed max-w-lg mx-auto md:mx-0"
+          >
+            Indulge your senses with the beauty and fragrance of our fresh
+            flower shop. From classic roses to exotic blooms, we offer a wide
+            variety of fresh flowers that are perfect for any occasion.
+          </p>
+          <button
+            class="mt-8 bg-[#E95A08] hover:bg-gray-900 text-white py-3 px-8 rounded-md font-medium transition-colors cursor-pointer shadow-md"
+          >
+            Shop Collection
+          </button>
         </div>
-        <!-- hero image -->
-        <div>
-          <img src="image/hero-flower.png" alt="" />
+        <div class="w-full md:w-1/2 flex justify-center">
+          <img
+            src="https://images.unsplash.com/photo-1563241598-6a3666d925d7?auto=format&fit=crop&w=600&q=80"
+            alt="Fresh Flowers"
+            class="rounded-2xl shadow-lg w-full max-w-md object-cover h-80 md:h-[400px]"
+          />
         </div>
       </div>
     </header>
 
-    <!-- Main -->
-    <!-- Our Plants Section -->
-    <section class="py-16">
-      <!-- Title and description -->
-      <div class="text-center">
-        <h1 class="text-5xl font-semibold">
-          <span class="text-[#E95A08]">Our</span>
-          <span>Plants</span>
-        </h1>
-        <p class="text-xl px-6 md:px-24 text-gray-500 mt-4">
-          Indulge your senses with the beauty and fragrance of our fresh flower
-          shop. From classic roses to exotic blooms, we offer a wide variety of
-          fresh.
-        </p>
-      </div>
+    <!-- Main Content -->
+    <main>
+      <!-- Our Plants Section (2 Rows - 8 Cards total) -->
+      <section id="plants" class="py-20 px-5 md:px-12 lg:px-24">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl md:text-5xl font-semibold">
+            <span class="text-[#E95A08]">Our</span>
+            <span>Plants</span>
+          </h2>
+          <p class="text-lg md:text-xl max-w-2xl mx-auto text-gray-500 mt-4">
+            Explore our most popular picks. Freshly cut, elegantly arranged, and
+            ready to brighten up any space.
+          </p>
+        </div>
 
-      <!-- Cards Grid -->
-      <!doctype html>
-      <html lang="en">
-        <head>
-          <meta charset="UTF-8" />
-          <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1.0"
-          />
-          <title>Faugel Flower Shop - Always Fresh Flowers</title>
-
-          <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-          <link
-            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-            rel="stylesheet"
-          />
-          <link rel="shortcut icon" href="image/logo.png" type="image/x-icon" />
-          <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-          <script
-            src="https://kit.fontawesome.com/61e8f2680f.js"
-            crossorigin="anonymous"
-          ></script>
-
-          <style>
-            * {
-              font-family: "Roboto", sans-serif;
-            }
-          </style>
-        </head>
-
-        <body class="bg-gray-100">
-          <!-- Header -->
-          <header>
-            <!-- navbar -->
-            <nav
-              class="flex items-center justify-between bg-slate-200 shadow-sm px-5 sticky top-0 z-50"
-            >
-              <img src="image/logo.png" alt="Faugel" class="h-18 py-2" />
-              <div class="flex gap-10">
-                <ul class="flex text-lg font-medium gap-8">
-                  <li
-                    class="hover:text-[#E95A08] hover:cursor-pointer border-b-slate-200 hover:border-b-[#E95A08] border-b-[3px] transition duration-150 ease-in"
-                  >
-                    <a href="#">Home</a>
-                  </li>
-                  <li
-                    class="hover:text-[#E95A08] hover:cursor-pointer border-b-slate-200 hover:border-b-[#E95A08] border-b-[3px] transition duration-150 ease-in"
-                  >
-                    <a href="#">Shop</a>
-                  </li>
-                  <li
-                    class="hover:text-[#E95A08] hover:cursor-pointer border-b-slate-200 hover:border-b-[#E95A08] border-b-[3px] transition duration-150 ease-in"
-                  >
-                    <a href="#">Blog</a>
-                  </li>
-                  <li
-                    class="hover:text-[#E95A08] hover:cursor-pointer border-b-slate-200 hover:border-b-[#E95A08] border-b-[3px] transition duration-150 ease-in"
-                  >
-                    <a href="#">About Us</a>
-                  </li>
-                </ul>
-                <div
-                  class="text-lg font-medium flex items-center justify-center gap-2 hover:cursor-pointer hover:text-[#E95A08] border-b-slate-200 hover:border-b-[#E95A08] border-b-[3px] transition duration-150 ease-in"
-                >
-                  <i class="fa-solid fa-bag-shopping text-xl"></i>
-                  <span>Cart</span>
-                </div>
-              </div>
-            </nav>
-
-            <!-- hero banner -->
-            <div class="h-80 flex items-end justify-between gap-4 mt-12 p-3">
-              <!-- hero title -->
-              <div class="pl-4 pr-4 w-1/2">
-                <h1 class="font-semibold text-7xl uppercase">
-                  <span>Always</span>
-                  <span class="text-[#E95A08]"> Fresh Flowers </span>
-                </h1>
-                <span>
-                  <p class="text-lg font-light mt-4 flex">
-                    Indulge your senses with the beauty and fragrance of our
-                    fresh flower shop. From classic roses to exotic blooms, we
-                    offer a wide variety of fresh flowers that are perfect for
-                    any occasion.
-                  </p>
-                </span>
-              </div>
-              <!-- hero image -->
+        <!-- Cards Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Row 1: Card 1 -->
+          <div
+            class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow border border-gray-100 flex flex-col justify-between group"
+          >
+            <div class="relative bg-gray-100 p-4 overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1526047932273-341f2a7631f9?auto=format&fit=crop&w=500&q=80"
+                alt="Pink Rose Bouquet"
+                class="w-full h-64 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div class="p-5 text-center flex-1 flex flex-col justify-between">
               <div>
-                <img src="image/hero-flower.png" alt="" />
+                <h3 class="font-semibold text-lg text-gray-800">
+                  Pink Rose Bouquet
+                </h3>
+                <p class="text-[#E95A08] font-bold text-xl mt-1">$25.00</p>
               </div>
+              <button
+                class="mt-4 w-full bg-gray-900 hover:bg-[#E95A08] text-white py-2 px-4 rounded-md font-medium transition-colors cursor-pointer"
+              >
+                Add to Cart
+              </button>
             </div>
-          </header>
+          </div>
 
-          <!-- Main -->
-          <!-- Our Plants Section -->
-          <section class="py-16">
-            <!-- Title and description -->
-            <div class="text-center">
-              <h1 class="text-5xl font-semibold">
-                <span class="text-[#E95A08]">Our</span>
-                <span>Plants</span>
-              </h1>
-              <p class="text-xl px-6 md:px-24 text-gray-500 mt-4">
-                Indulge your senses with the beauty and fragrance of our fresh
-                flower shop. From classic roses to exotic blooms, we offer a
-                wide variety of fresh.
-              </p>
+          <!-- Row 1: Card 2 -->
+          <div
+            class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow border border-gray-100 flex flex-col justify-between group"
+          >
+            <div class="relative bg-gray-100 p-4 overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1508610048659-a06b669e3321?auto=format&fit=crop&w=500&q=80"
+                alt="White Lily Arrangement"
+                class="w-full h-64 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div class="p-5 text-center flex-1 flex flex-col justify-between">
+              <div>
+                <h3 class="font-semibold text-lg text-gray-800">
+                  White Lily Elegance
+                </h3>
+                <p class="text-[#E95A08] font-bold text-xl mt-1">$32.00</p>
+              </div>
+              <button
+                class="mt-4 w-full bg-gray-900 hover:bg-[#E95A08] text-white py-2 px-4 rounded-md font-medium transition-colors cursor-pointer"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+
+          <!-- Row 1: Card 3 -->
+          <div
+            class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow border border-gray-100 flex flex-col justify-between group"
+          >
+            <div class="relative bg-gray-100 p-4 overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1582794543139-8ac9cb0f7b11?auto=format&fit=crop&w=500&q=80"
+                alt="Red Rose Box"
+                class="w-full h-64 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div class="p-5 text-center flex-1 flex flex-col justify-between">
+              <div>
+                <h3 class="font-semibold text-lg text-gray-800">
+                  Classic Red Roses
+                </h3>
+                <p class="text-[#E95A08] font-bold text-xl mt-1">$40.00</p>
+              </div>
+              <button
+                class="mt-4 w-full bg-gray-900 hover:bg-[#E95A08] text-white py-2 px-4 rounded-md font-medium transition-colors cursor-pointer"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+
+          <!-- Row 1: Card 4 -->
+          <div
+            class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow border border-gray-100 flex flex-col justify-between group"
+          >
+            <div class="relative bg-gray-100 p-4 overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1561181286-d3fee7d55364?auto=format&fit=crop&w=500&q=80"
+                alt="Sunflowers Mix"
+                class="w-full h-64 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div class="p-5 text-center flex-1 flex flex-col justify-between">
+              <div>
+                <h3 class="font-semibold text-lg text-gray-800">
+                  Golden Sunflowers
+                </h3>
+                <p class="text-[#E95A08] font-bold text-xl mt-1">$28.00</p>
+              </div>
+              <button
+                class="mt-4 w-full bg-gray-900 hover:bg-[#E95A08] text-white py-2 px-4 rounded-md font-medium transition-colors cursor-pointer"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+
+          <!-- Row 2: Card 5 -->
+          <div
+            class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow border border-gray-100 flex flex-col justify-between group"
+          >
+            <div class="relative bg-gray-100 p-4 overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=500&q=80"
+                alt="Lavender Bloom"
+                class="w-full h-64 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div class="p-5 text-center flex-1 flex flex-col justify-between">
+              <div>
+                <h3 class="font-semibold text-lg text-gray-800">
+                  Purple Lavender Mist
+                </h3>
+                <p class="text-[#E95A08] font-bold text-xl mt-1">$22.00</p>
+              </div>
+              <button
+                class="mt-4 w-full bg-gray-900 hover:bg-[#E95A08] text-white py-2 px-4 rounded-md font-medium transition-colors cursor-pointer"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+
+          <!-- Row 2: Card 6 -->
+          <div
+            class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow border border-gray-100 flex flex-col justify-between group"
+          >
+            <div class="relative bg-gray-100 p-4 overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1520763185298-1b434c919102?auto=format&fit=crop&w=500&q=80"
+                alt="Tulip Spring Mix"
+                class="w-full h-64 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div class="p-5 text-center flex-1 flex flex-col justify-between">
+              <div>
+                <h3 class="font-semibold text-lg text-gray-800">
+                  Spring Tulip Garden
+                </h3>
+                <p class="text-[#E95A08] font-bold text-xl mt-1">$30.00</p>
+              </div>
+              <button
+                class="mt-4 w-full bg-gray-900 hover:bg-[#E95A08] text-white py-2 px-4 rounded-md font-medium transition-colors cursor-pointer"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+
+          <!-- Row 2: Card 7 -->
+          <div
+            class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow border border-gray-100 flex flex-col justify-between group"
+          >
+            <div class="relative bg-gray-100 p-4 overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1545241047-6083a3684587?auto=format&fit=crop&w=500&q=80"
+                alt="Potted Orchid"
+                class="w-full h-64 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div class="p-5 text-center flex-1 flex flex-col justify-between">
+              <div>
+                <h3 class="font-semibold text-lg text-gray-800">
+                  Royal Orchid Pot
+                </h3>
+                <p class="text-[#E95A08] font-bold text-xl mt-1">$45.00</p>
+              </div>
+              <button
+                class="mt-4 w-full bg-gray-900 hover:bg-[#E95A08] text-white py-2 px-4 rounded-md font-medium transition-colors cursor-pointer"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+
+          <!-- Row 2: Card 8 -->
+          <div
+            class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow border border-gray-100 flex flex-col justify-between group"
+          >
+            <div class="relative bg-gray-100 p-4 overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1591886960571-74d43a9d4166?auto=format&fit=crop&w=500&q=80"
+                alt="Wildflower Bouquet"
+                class="w-full h-64 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div class="p-5 text-center flex-1 flex flex-col justify-between">
+              <div>
+                <h3 class="font-semibold text-lg text-gray-800">
+                  Wildflower Delight
+                </h3>
+                <p class="text-[#E95A08] font-bold text-xl mt-1">$27.00</p>
+              </div>
+              <button
+                class="mt-4 w-full bg-gray-900 hover:bg-[#E95A08] text-white py-2 px-4 rounded-md font-medium transition-colors cursor-pointer"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Us Section -->
+      <section id="about" class="py-20 px-5 md:px-12 lg:px-24 bg-white">
+        <div class="flex flex-col md:flex-row items-center gap-12 lg:gap-20">
+          <div class="w-full md:w-1/2">
+            <img
+              src="https://images.unsplash.com/photo-1574620021644-8846c4f03df9?auto=format&fit=crop&w=800&q=80"
+              alt="Florist arranging flowers"
+              class="rounded-2xl shadow-xl w-full h-auto object-cover"
+            />
+          </div>
+          <div class="w-full md:w-1/2 text-center md:text-left">
+            <h2 class="text-4xl md:text-5xl font-semibold mb-6">
+              About <span class="text-[#E95A08]">Faugel</span>
+            </h2>
+            <p class="text-gray-600 text-lg mb-6 leading-relaxed">
+              At Faugel, we believe that flowers are more than just a gift—they
+              are a language of love, sympathy, celebration, and joy. With over
+              20 years of experience, our artisan florists handcraft every
+              bouquet with immense passion and precision.
+            </p>
+            <p class="text-gray-600 text-lg mb-8 leading-relaxed">
+              We proudly source our blooms from sustainable, local farms to
+              ensure maximum freshness and longevity. Whether it's a grand
+              wedding or a simple "thinking of you" gesture, let us help you
+              find the perfect arrangement for your special moments.
+            </p>
+            <button
+              class="bg-gray-900 hover:bg-[#E95A08] text-white py-3 px-8 rounded-md font-medium transition-colors cursor-pointer shadow-md"
+            >
+              Read Our Story
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Available Service Section -->
+      <section id="services" class="py-16 bg-gray-50">
+        <div class="text-center">
+          <h2 class="text-4xl md:text-5xl font-semibold">
+            <span class="text-[#E95A08]">Available</span> Services
+          </h2>
+          <p class="text-gray-500 mt-4">
+            We provide everything you need to make your special moments
+            beautiful.
+          </p>
+        </div>
+
+        <!-- Available Service Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-6 md:px-20 mt-10">
+          <div
+            class="bg-gray-100 p-8 rounded-xl text-center hover:shadow-lg transition"
+          >
+            <i class="fa-solid fa-truck-fast text-5xl text-[#E95A08]"></i>
+            <h3 class="text-2xl font-semibold mt-5">Fast Delivery</h3>
+            <p class="text-gray-500 mt-3">
+              Get your fresh flowers delivered safely and to your doorstep.
+            </p>
+          </div>
+
+          <div
+            class="bg-gray-100 p-8 rounded-xl text-center hover:shadow-lg transition"
+          >
+            <i class="fa-solid fa-truck-fast text-5xl text-[#E95A08]"></i>
+            <h3 class="text-2xl font-semibold mt-5">Fast Delivery</h3>
+            <p class="text-gray-500 mt-3">
+              Get your fresh flowers delivered safely and to your doorstep.
+            </p>
+          </div>
+
+          <div
+            class="bg-gray-100 p-8 rounded-xl text-center hover:shadow-lg transition"
+          >
+            <i class="fa-solid fa-truck-fast text-5xl text-[#E95A08]"></i>
+            <h3 class="text-2xl font-semibold mt-5">Fast Delivery</h3>
+            <p class="text-gray-500 mt-3">
+              Get your fresh flowers delivered safely and to your doorstep.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonial Section -->
+      <section id="testimonial" class="py-16 bg-white">
+        <div class="text-center">
+          <h2 class="text-5xl font-semibold">
+            Customer <span class="text-[#E95A08]">Testimonials</span>
+          </h2>
+          <p class="text-gray-500 mt-4">
+            What our customers say about our flowers and servicees.
+          </p>
+        </div>
+
+        <!-- Testimonial Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-6 md:px-20 mt-10">
+          <!-- Card 1 -->
+          <div
+            class="bg-slate-100 p-8 rounded-xl shadow-sm hover:shadow-lg transition"
+          >
+            <div class="text-[#E95A08] text-xl">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
             </div>
 
-            <!-- Cards Grid -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              <!-- Card 1 -->
-              <div
-                class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow border border-gray-100 flex flex-col justify-between"
-              >
-                <div class="relative bg-gray-100 p-4">
-                  <img
-                    src="https://images.unsplash.com/photo-1526047932273-341f2a7631f9?auto=format&fit=crop&w=500&q=80"
-                    alt="Pink Rose Bouquet"
-                    class="w-full h-64 object-cover rounded-lg"
-                  />
-                </div>
-                <div
-                  class="p-5 text-center flex-1 flex flex-col justify-between"
-                >
-                  <div>
-                    <h3 class="font-semibold text-lg text-gray-800">
-                      Pink Rose Bouquet
-                    </h3>
-                    <p class="text-[#E95A08] font-bold text-xl mt-1">$25.00</p>
-                  </div>
-                  <button
-                    class="add-to-cart-btn mt-4 w-full bg-gray-900 hover:bg-[#E95A08] text-white py-2 px-4 rounded-md font-medium transition-colors cursor-pointer"
-                  >
-                    Add to Cart
-                  </button>
-                </div>
-              </div>
+            <p class="text-gray-600 mt-5">
+              "The flowers were extremely fresh and the arrangement was
+              beautiful. I will definitely order again!"
+            </p>
 
-              <!-- Card 2 -->
-              <div
-                class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow border border-gray-100 flex flex-col justify-between"
-              >
-                <div class="relative bg-gray-100 p-4">
-                  <img
-                    src="https://images.unsplash.com/photo-1508610048659-a06b669e3321?auto=format&fit=crop&w=500&q=80"
-                    alt="White Lily Arrangement"
-                    class="w-full h-64 object-cover rounded-lg"
-                  />
-                </div>
-                <div
-                  class="p-5 text-center flex-1 flex flex-col justify-between"
-                >
-                  <div>
-                    <h3 class="font-semibold text-lg text-gray-800">
-                      White Lily Elegance
-                    </h3>
-                    <p class="text-[#E95A08] font-bold text-xl mt-1">$32.00</p>
-                  </div>
-                  <button
-                    class="add-to-cart-btn mt-4 w-full bg-gray-900 hover:bg-[#E95A08] text-white py-2 px-4 rounded-md font-medium transition-colors cursor-pointer"
-                  >
-                    Add to Cart
-                  </button>
-                </div>
-              </div>
+            <h3 class="font-semibold text-xl mt-5">John Smith</h3>
+            <p class="text-gray-500">Happy Customer</p>
+          </div>
 
-              <!-- Card 3 -->
-              <div
-                class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow border border-gray-100 flex flex-col justify-between"
-              >
-                <div class="relative bg-gray-100 p-4">
-                  <img
-                    src="https://images.unsplash.com/photo-1582794543139-8ac9cb0f7b11?auto=format&fit=crop&w=500&q=80"
-                    alt="Red Rose Box"
-                    class="w-full h-64 object-cover rounded-lg"
-                  />
-                </div>
-                <div
-                  class="p-5 text-center flex-1 flex flex-col justify-between"
-                >
-                  <div>
-                    <h3 class="font-semibold text-lg text-gray-800">
-                      Classic Red Roses
-                    </h3>
-                    <p class="text-[#E95A08] font-bold text-xl mt-1">$40.00</p>
-                  </div>
-                  <button
-                    class="add-to-cart-btn mt-4 w-full bg-gray-900 hover:bg-[#E95A08] text-white py-2 px-4 rounded-md font-medium transition-colors cursor-pointer"
-                  >
-                    Add to Cart
-                  </button>
-                </div>
-              </div>
-
-              <!-- Card 4 -->
-              <div
-                class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow border border-gray-100 flex flex-col justify-between"
-              >
-                <div class="relative bg-gray-100 p-4">
-                  <img
-                    src="https://images.unsplash.com/photo-1561181286-d3fee7d55364?auto=format&fit=crop&w=500&q=80"
-                    alt="Sunflowers Mix"
-                    class="w-full h-64 object-cover rounded-lg"
-                  />
-                </div>
-                <div
-                  class="p-5 text-center flex-1 flex flex-col justify-between"
-                >
-                  <div>
-                    <h3 class="font-semibold text-lg text-gray-800">
-                      Golden Sunflowers
-                    </h3>
-                    <p class="text-[#E95A08] font-bold text-xl mt-1">$28.00</p>
-                  </div>
-                  <button
-                    class="add-to-cart-btn mt-4 w-full bg-gray-900 hover:bg-[#E95A08] text-white py-2 px-4 rounded-md font-medium transition-colors cursor-pointer"
-                  >
-                    Add to Cart
-                  </button>
-                </div>
-              </div>
+          <!-- Card 1 -->
+          <div
+            class="bg-slate-100 p-8 rounded-xl shadow-sm hover:shadow-lg transition"
+          >
+            <div class="text-[#E95A08] text-xl">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
             </div>
-          </section>
-        </body>
-      </html>
-    </section>
+
+            <p class="text-gray-600 mt-5">
+              "The flowers were extremely fresh and the arrangement was
+              beautiful. I will definitely order again!"
+            </p>
+
+            <h3 class="font-semibold text-xl mt-5">John Smith</h3>
+            <p class="text-gray-500">Happy Customer</p>
+          </div>
+
+          <!-- Card 1 -->
+          <div
+            class="bg-slate-100 p-8 rounded-xl shadow-sm hover:shadow-lg transition"
+          >
+            <div class="text-[#E95A08] text-xl">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+
+            <p class="text-gray-600 mt-5">
+              "The flowers were extremely fresh and the arrangement was
+              beautiful. I will definitely order again!"
+            </p>
+
+            <h3 class="font-semibold text-xl mt-5">John Smith</h3>
+            <p class="text-gray-500">Happy Customer</p>
+          </div>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
