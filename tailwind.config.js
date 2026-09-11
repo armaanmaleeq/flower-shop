@@ -1,14 +1,19 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
-    content: ["./src/**/*.{html,js}"],
-    theme: {
-      extend: {
-        colors: {
-          "color-primary": "#707070",
-          "golden-primary": "#B68C5A",
-          "color-title":"#414040",
-        }
+tailwind.config = {
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: ["Inter", "sans-serif"],
+      },
+      colors: {
+        brand: {
+          pink: "#d82b6b",
+          "pink-hover": "#c0215b",
+          "pink-light": "#fceef3",
+          dark: "#111827",
+          gray: "#6b7280",
+        },
       },
     },
-    plugins: [],
-  }
+  },
+};
